@@ -80,7 +80,7 @@ function display_kits(data) {
         productCard.appendChild(addToCartButton);
         productCard.appendChild(productDetailsButton);
 
-        // Ajout de la carte d'product au conteneur
+        // Ajout de la carte du produit au conteneur
         articleCardsContainer.appendChild(productCard);
     })
 
