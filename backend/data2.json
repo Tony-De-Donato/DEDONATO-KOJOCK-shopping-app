@@ -3,10 +3,10 @@
         {
             "id": 1,
             "name": "Nissan 400z (RZ34)",
-            "price": 6000,
+            "price": 6500,
             "brand": "nissan",
             "type": "jdm",
-            "reduction": 6500,
+            "reduction": 6000,
             "img_1": "assets/kits/kit1/img1.jpg",
             "img_2": "assets/kits/kit1/img2.jpg",
             "img_3": "assets/kits/kit1/img3.jpg",
@@ -19,148 +19,166 @@
             "description": "En résumé, la Nissan 400Z est un coupé sportif élégant et performant qui combine un design classique inspiré de la Z-car d'origine avec des technologies modernes pour offrir une expérience de conduite dynamique."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 2,
+            "name": "Toyota GR Yaris",
+            "price": 6300,
+            "brand": "Toyota",
+            "type": "jdm",
+            "reduction": 6100,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 1000,
+                "pare-choc arrière": 900,
+                "élargisseurs d'ailes": 1200,
+                "kit entier": 6100
             },
-            "description": ""
+            "description": "La Toyota Yaris GR est une citadine sportive équipée d'un moteur 3 cylindres 1.6L turbo de 261 ch, 4 roues motrices et une boîte manuelle 6 vitesses. Elle offre des performances élevées, un design agressif et une expérience de conduite exaltante."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 3,
+            "name": "Toyota GR86",
+            "price": 5980,
+            "brand": "Toyota",
+            "type": "jdm",
+            "reduction": 5900,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 1080,
+                "pare-choc arrière": 550,
+                "élargisseurs d'ailes": 870,
+                "kit entier": 5980
             },
-            "description": ""
+            "description": "La Toyota GR86 est un coupé sportif, équipé d'un moteur boxer 4 cylindres 2.4L de 228 ch, propulsion arrière et boîte manuelle 6 vitesses. Elle offre une conduite agile, un design élégant et une expérience de conduite engageante pour les amateurs de sport automobile."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 4,
+            "name": "Corvette C8",
+            "price": 8000,
+            "brand": "Chevrollet Corvette",
+            "type": "US",
+            "reduction": 7350,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 1100,
+                "pare-choc arrière": 1320,
+                "élargisseurs d'ailes": 1320,
+                "kit entier": 7350
             },
-            "description": ""
+            "description": "La Corvette C8 est une voiture de sport américaine avec un moteur V8 6.2L de 490 ch, position central-arrière, et une boîte auto 8 vitesses. Elle offre des performances impressionnantes, un design audacieux et une expérience de conduite inoubliable pour les passionnés."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 5,
+            "name": "BMW M3 (E30)",
+            "price": 3550,
+            "brand": "BMW",
+            "type": "EU",
+            "reduction": 3400,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 550,
+                "pare-choc arrière": 700,
+                "élargisseurs d'ailes": 1270,
+                "kit entier": 3400
             },
-            "description": ""
+            "description": "La BMW M3 E30 est une icône des années 80, dotée d'un moteur 4 cylindres 2.3L de 200 ch, propulsion arrière et boîte manuelle 5 vitesses. Elle offre une conduite dynamique, un design intemporel et une expérience de conduite authentique pour les passionnés de voitures classiques."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 6,
+            "name": "Porsche Cayman 987",
+            "price": 6550,
+            "brand": "Porsche",
+            "type": "EU",
+            "reduction": 5350,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 990,
+                "pare-choc arrière": 808,
+                "élargisseurs d'ailes": 3790,
+                "kit entier": 5350
             },
-            "description": ""
+            "description": "La Porsche Cayman 987 est un coupé sportif des années 2000, avec un moteur flat-6 de 2.7L à 3.4L (245-320 ch), position central-arrière et boîtes manuelle ou PDK. Elle offre une conduite précise, un design élégant et une expérience de conduite équilibrée pour les amateurs de sport automobile."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 7,
+            "name": "Ford Raptor",
+            "price": 5320,
+            "brand": "Ford",
+            "type": "US",
+            "reduction": 4800,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 1420,
+                "pare-choc arrière": 950,
+                "élargisseurs d'ailes": 2200,
+                "kit entier": 4800
             },
-            "description": ""
+            "description": "La Ford Raptor est un pick-up haute performance avec un moteur V6 3.5L EcoBoost de 450 ch, 4 roues motrices et une boîte auto 10 vitesses. Elle offre des capacités hors route impressionnantes, un design robuste et une expérience de conduite polyvalente pour les aventuriers intrépides."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 8,
+            "name": "Nissan Titan",
+            "price": 5500,
+            "brand": "Nissan",
+            "type": "jdm",
+            "reduction": 5100,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 2100,
+                "pare-choc arrière": 900,
+                "élargisseurs d'ailes": 1920,
+                "kit entier": 5100
             },
-            "description": ""
+            "description": "La Nissan Titan est un pick-up plein format doté d'un moteur V8 5.6L de 400 ch, propulsion ou 4 roues motrices et une boîte auto 9 vitesses. Elle offre une capacité de remorquage solide, un design imposant et une expérience de conduite pratique pour les besoins professionnels et personnels."
         },
         {
-            "id": ,
-            "name": "",
-            "price": ,
-            "brand": "",
-            "type": "",
-            "reduction": ,
+            "id": 9,
+            "name": "Toyota Supra MK V",
+            "price": 9020,
+            "brand": "Toyota",
+            "type": "jdm",
+            "reduction": 8200,
             "img_1": "assets/kits/kit /img1.jpg",
             "img_2": "assets/kits/kit /img2.jpg",
             "img_3": "assets/kits/kit /img3.jpg",
             "parts": {
-                "pare-choc avant": ,
-                "pare-choc arrière": ,
-                "élargisseurs d'ailes": ,
-                "kit entier": 
+                "pare-choc avant": 800,
+                "pare-choc arrière": 740,
+                "élargisseurs d'ailes": 1400,
+                "kit entier": 8200
             },
-            "description": ""
+            "description": "La Toyota Supra MK V est un coupé sportif équipé d'un moteur 6 cylindres en ligne 3.0L turbo de 335 ch, propulsion arrière et une boîte auto 8 vitesses. Elle offre des performances énergiques, un design moderne et une expérience de conduite enthousiasmante pour les passionnés de voitures de sport."
+        },
+        {
+            "id": 10,
+            "name": "Nissan Skyline GT-R (R32)",
+            "price": 5960,
+            "brand": "Nissan",
+            "type": "jdm",
+            "reduction": 5990,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": 1600,
+                "pare-choc arrière": 1600,
+                "élargisseurs d'ailes": 1800,
+                "kit entier": 5990
+            },
+            "description": "La Nissan Skyline GT-R R32 est une icône des années 90, dotée d'un moteur 6 cylindres en ligne 2.6L biturbo de 276 ch, 4 roues motrices et une boîte manuelle 5 vitesses. Elle offre une conduite performante, un design emblématique et une expérience de conduite légendaire pour les passionnés de voitures japonaises."
         }
     ],
     "category": [
