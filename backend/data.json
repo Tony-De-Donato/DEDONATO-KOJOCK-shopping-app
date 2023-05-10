@@ -4,6 +4,7 @@
             "id": 1,
             "name": "Air Jordan 1 Retro High University Blue",
             "price": 470,
+            "original-price":520 ,
             "release_date": "2021-03-06",
             "colors": "blue",
             "delivery_time": 5,

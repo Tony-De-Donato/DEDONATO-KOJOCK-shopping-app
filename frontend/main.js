@@ -1,19 +1,11 @@
 const url = "http://localhost:3000/";
 
 const btn = document.querySelector(".sneakers_button");
-const pickers = document.querySelectorAll(".picker");
 
 let sneakers;
-let filteredSneakers;
 
 btn.addEventListener("click", getSneakers);
-for (let i of pickers) {
-    i.addEventListener("click", () => {
-        color = i.getAttribute("data-color");
-        filterbycolor();
-    });
 
-}
 
 function getSneakers() {
     fetch(url + 'sneakers')
@@ -30,6 +22,7 @@ function getSneakers() {
                 productCard.id = product.id;
 
                 const productImage = document.createElement('img');
+                productImage.classList.add('product-image');
                 productImage.src = product.img_1;
                 productImage.onmouseover = () => {
                     productImage.src = product.img_2;
@@ -38,13 +31,13 @@ function getSneakers() {
                     productImage.src = product.img_1;
                 }
 
-                const productTitle = document.createElement('h2');
+                const productTitle = document.createElement('h1');
                 productTitle.innerText = product.name;
 
                 const productPrice = document.createElement('p');
                 productPrice.classList.add('price');
                 productPrice.innerText = `${product.price}€`;
-                if (product.discount) {
+                if (product.original-price != product.price) {
                     const originalPrice = document.createElement('span');
                     originalPrice.classList.add('original-price');
                     originalPrice.innerText = `${product.originalPrice}€`;

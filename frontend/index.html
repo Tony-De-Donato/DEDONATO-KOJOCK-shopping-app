@@ -10,10 +10,13 @@
 
 <body>
     <header>
-        <img src="" alt="logo" width="100px">
-        <div></div>
+        
+        <div style="height: 15vh;width: max-content; display: flex; justify-content: center;align-items: center;">
+            <img src="assets/icons/gr.jpg" alt="logo gazoo racing" height="98%">
+            <img src="assets/icons/nismo.jpg" alt="logo nismo" height="98%">
+        </div>
 
-        <img src="assets/icons/icons8-buying-80.png" alt="cart" width="50px">
+        <img src="assets/icons/icons8-buying-80.png" alt="cart" height="100%">
 
 
     </header>
@@ -32,9 +35,9 @@
         <div class="box">
             <select>
                 <option>Tous types</option>
-                <option>Jdm</option>
-                <option>Euro</option>
-                <option>Us</option>
+                <option>JDM</option>
+                <option>EURO</option>
+                <option>US</option>
             </select>
         </div>
 
@@ -73,10 +76,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 20vh;
+        height: 15vh;
         width: 98vw;
         background-color: #ffffff;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         padding: 0 2vw;
     }
 
@@ -95,43 +98,26 @@
         gap: 20px;
     }
 
-    .color-picker-ctn {
+    .product-card{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        margin-top: 10px 0;
-        gap: 10px;
+        width: 28vw;
+        height: min-content;
+        background-color: #ffffff;
+        border: 2px solid black;
+        border-radius: 3vh;
+        padding: 10px;
+        margin: 10vw;
     }
 
-    .round {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid black;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .product-image{
+        width: 100%;
     }
 
-    .orange {
-        background-color: orange;
-    }
-
-    .yellow {
-        background-color: yellow;
-    }
-
-    .green {
-        background-color: green;
-    }
-
-    .blue {
-        background-color: blue;
-    }
-
-    .red {
-        background-color: red;
+    .original-price{
+        text-decoration: line-through;
     }
 
 
