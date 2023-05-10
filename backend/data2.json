@@ -1,0 +1,180 @@
+{
+    "kits": [
+        {
+            "id": 1,
+            "name": "Nissan 400z (RZ34)",
+            "price": 6000,
+            "brand": "nissan",
+            "type": "jdm",
+            "reduction": 6500,
+            "img_1": "assets/kits/kit1/img1.jpg",
+            "img_2": "assets/kits/kit1/img2.jpg",
+            "img_3": "assets/kits/kit1/img3.jpg",
+            "parts": {
+                "pare-choc avant": 1800,
+                "pare-choc arrière": 600,
+                "élargisseurs d'ailes": 1200,
+                "kit entier": 6000
+            },
+            "description": "En résumé, la Nissan 400Z est un coupé sportif élégant et performant qui combine un design classique inspiré de la Z-car d'origine avec des technologies modernes pour offrir une expérience de conduite dynamique."
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        },
+        {
+            "id": ,
+            "name": "",
+            "price": ,
+            "brand": "",
+            "type": "",
+            "reduction": ,
+            "img_1": "assets/kits/kit /img1.jpg",
+            "img_2": "assets/kits/kit /img2.jpg",
+            "img_3": "assets/kits/kit /img3.jpg",
+            "parts": {
+                "pare-choc avant": ,
+                "pare-choc arrière": ,
+                "élargisseurs d'ailes": ,
+                "kit entier": 
+            },
+            "description": ""
+        }
+    ],
+    "category": [
+        {
+            "id": 0,
+            "name": "Commune"
+        },
+        {
+            "id": 1,
+            "name": "Rare"
+        },
+        {
+            "id": 2,
+            "name": "Légendaire"
+        }
+    ]
+}
