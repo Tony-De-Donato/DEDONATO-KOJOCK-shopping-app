@@ -9,9 +9,9 @@ app.use(cors({
     origin: '*',
 }));
 
-const sneakersRoutes = require('./routes/sneakers');
+const kitsRoutes = require('./routes/kits');
 
-app.use(sneakersRoutes);
+app.use(kitsRoutes);
 
 app.listen(port, () => {
     console.log(`listening at http://localhost:${port}`);

@@ -2,13 +2,13 @@ const url = "http://localhost:3000/";
 
 const btn = document.querySelector(".sneakers_button");
 
-let sneakers;
+let kits;
 
-btn.addEventListener("click", getSneakers);
+btn.addEventListener("click", getKits);
 
 
-function getSneakers() {
-    fetch(url + 'sneakers')
+function getKits() {
+    fetch(url + 'kit')
         .then(response => response.json())
         .then(data => {
             const articleCardsContainer = document.getElementById('article-cards');
@@ -79,8 +79,8 @@ comparebyprice = (a, b) => {
 
 function sortbyprice() {
     filteredSneakers.sort(comparebyprice);
-    getSneakers();
+    getKits();
 }
 
 
-getSneakers();
+getKits();

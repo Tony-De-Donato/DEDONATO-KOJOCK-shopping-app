@@ -4,7 +4,7 @@
             "id": 1,
             "name": "Nissan 400z (RZ34)",
             "price": 6500,
-            "brand": "nissan",
+            "brand": "Nissan",
             "type": "jdm",
             "reduction": 6000,
             "img_1": "assets/kits/kit1/img1.jpg",
@@ -25,9 +25,9 @@
             "brand": "Toyota",
             "type": "jdm",
             "reduction": 6100,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit2/img1.jpg",
+            "img_2": "assets/kits/kit2/img2.jpg",
+            "img_3": "assets/kits/kit2/img3.jpg",
             "parts": {
                 "pare-choc avant": 1000,
                 "pare-choc arrière": 900,
@@ -43,9 +43,9 @@
             "brand": "Toyota",
             "type": "jdm",
             "reduction": 5900,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit3/img1.jpg",
+            "img_2": "assets/kits/kit3/img2.jpg",
+            "img_3": "assets/kits/kit3/img3.jpg",
             "parts": {
                 "pare-choc avant": 1080,
                 "pare-choc arrière": 550,
@@ -56,14 +56,14 @@
         },
         {
             "id": 4,
-            "name": "Corvette C8",
+            "name": "Chevrollet Corvette C8",
             "price": 8000,
-            "brand": "Chevrollet Corvette",
+            "brand": "Chevrollet",
             "type": "US",
             "reduction": 7350,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit4/img1.jpg",
+            "img_2": "assets/kits/kit4/img2.jpg",
+            "img_3": "assets/kits/kit4/img3.jpg",
             "parts": {
                 "pare-choc avant": 1100,
                 "pare-choc arrière": 1320,
@@ -79,9 +79,9 @@
             "brand": "BMW",
             "type": "EU",
             "reduction": 3400,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit5/img1.jpg",
+            "img_2": "assets/kits/kit5/img2.jpg",
+            "img_3": "assets/kits/kit5/img3.jpg",
             "parts": {
                 "pare-choc avant": 550,
                 "pare-choc arrière": 700,
@@ -97,9 +97,9 @@
             "brand": "Porsche",
             "type": "EU",
             "reduction": 5350,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit6/img1.jpg",
+            "img_2": "assets/kits/kit6/img2.jpg",
+            "img_3": "assets/kits/kit6/img3.jpg",
             "parts": {
                 "pare-choc avant": 990,
                 "pare-choc arrière": 808,
@@ -115,9 +115,9 @@
             "brand": "Ford",
             "type": "US",
             "reduction": 4800,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit7/img1.jpg",
+            "img_2": "assets/kits/kit7/img2.jpg",
+            "img_3": "assets/kits/kit7/img3.jpg",
             "parts": {
                 "pare-choc avant": 1420,
                 "pare-choc arrière": 950,
@@ -133,9 +133,9 @@
             "brand": "Nissan",
             "type": "jdm",
             "reduction": 5100,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit8/img1.jpg",
+            "img_2": "assets/kits/kit8/img2.jpg",
+            "img_3": "assets/kits/kit8/img3.jpg",
             "parts": {
                 "pare-choc avant": 2100,
                 "pare-choc arrière": 900,
@@ -151,9 +151,9 @@
             "brand": "Toyota",
             "type": "jdm",
             "reduction": 8200,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit9/img1.jpg",
+            "img_2": "assets/kits/kit9/img2.jpg",
+            "img_3": "assets/kits/kit9/img3.jpg",
             "parts": {
                 "pare-choc avant": 800,
                 "pare-choc arrière": 740,
@@ -169,9 +169,9 @@
             "brand": "Nissan",
             "type": "jdm",
             "reduction": 5990,
-            "img_1": "assets/kits/kit /img1.jpg",
-            "img_2": "assets/kits/kit /img2.jpg",
-            "img_3": "assets/kits/kit /img3.jpg",
+            "img_1": "assets/kits/kit10/img1.jpg",
+            "img_2": "assets/kits/kit10/img2.jpg",
+            "img_3": "assets/kits/kit10/img3.jpg",
             "parts": {
                 "pare-choc avant": 1600,
                 "pare-choc arrière": 1600,
@@ -179,20 +179,6 @@
                 "kit entier": 5990
             },
             "description": "La Nissan Skyline GT-R R32 est une icône des années 90, dotée d'un moteur 6 cylindres en ligne 2.6L biturbo de 276 ch, 4 roues motrices et une boîte manuelle 5 vitesses. Elle offre une conduite performante, un design emblématique et une expérience de conduite légendaire pour les passionnés de voitures japonaises."
-        }
-    ],
-    "category": [
-        {
-            "id": 0,
-            "name": "Commune"
-        },
-        {
-            "id": 1,
-            "name": "Rare"
-        },
-        {
-            "id": 2,
-            "name": "Légendaire"
         }
     ]
 }
