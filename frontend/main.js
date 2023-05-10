@@ -1,10 +1,23 @@
 const url = "http://localhost:3000/";
 
-const btn = document.querySelector(".sneakers_button");
+const btn = document.querySelector("#refresh_button");
 
 let kits;
 
-btn.addEventListener("click", getKits);
+btn.addEventListener("click", refresh);
+
+function refresh() {
+    fetch(url + 'kit')
+        .then(response => response.json())
+        .then(data => {
+            kits = data;
+            console.log(kits);
+            getKits();
+        })
+        .catch(err => {
+            console.log(err);
+        });
+}
 
 
 function getKits() {
@@ -12,7 +25,6 @@ function getKits() {
         .then(response => response.json())
         .then(data => {
             const articleCardsContainer = document.getElementById('article-cards');
-            console.log(data);
 
             // Boucle sur les articles du fichier JSON
             data.forEach(product => {
@@ -72,15 +84,7 @@ function getKits() {
 
 
 
-comparebyprice = (a, b) => {
-    return a.price - b.price;
-}
-
-
-function sortbyprice() {
-    filteredSneakers.sort(comparebyprice);
-    getKits();
-}
-
-
 getKits();
+
+
+console.log(all_kits);

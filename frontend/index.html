@@ -21,10 +21,10 @@
 
     </header>
     <div id="filters">
-        <button class="sneakers_button">refresh</button>
+        <button id="refresh_button">appliquer</button>
 
         <div class="box">
-            <select>
+            <select id="marque">
                 <option>Toutes marques</option>
                 <option>Nissan</option>
                 <option>Toyota</option>
@@ -33,7 +33,7 @@
             </select>
         </div>
         <div class="box">
-            <select>
+            <select id="type">
                 <option>Tous types</option>
                 <option>JDM</option>
                 <option>EURO</option>
@@ -91,6 +91,17 @@
         width: 100vw;
     }
 
+    #refresh_button{
+        padding: 1vh;
+        height: 50%;
+        border-radius: 3vh;
+        background-color: #ffffff;
+        border: 2px solid black;
+        font-size: 2vw;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
     #article-cards {
         display: flex;
         flex-wrap: wrap;
@@ -103,13 +114,13 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 28vw;
+        width: 25vw;
         height: min-content;
         background-color: #ffffff;
         border: 2px solid black;
         border-radius: 3vh;
         padding: 10px;
-        margin: 10vw;
+        margin: 3vw;
     }
 
     .product-image{
@@ -137,7 +148,6 @@
     }
 
     .box::before {
-        content: "\f13a";
         width: 20%;
         height: 100%;
         text-align: center;
@@ -151,6 +161,10 @@
     .box:hover::before {
         color: rgba(255, 255, 255, 0.6);
         background-color: rgba(255, 255, 255, 0.2);
+        
+    }
+    select:hover{
+        cursor: pointer;
     }
 
     .box select option {
