@@ -30,12 +30,12 @@ function getSneakers() {
                 productCard.id = product.id;
 
                 const productImage = document.createElement('img');
-                productImage.src = product.image1;
+                productImage.src = product.img_1;
                 productImage.onmouseover = () => {
-                    productImage.src = product.image2;
+                    productImage.src = product.img_2;
                 }
                 productImage.onmouseout = () => {
-                    productImage.src = product.image1;
+                    productImage.src = product.img_1;
                 }
 
                 const productTitle = document.createElement('h2');

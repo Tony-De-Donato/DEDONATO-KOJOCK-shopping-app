@@ -9,9 +9,9 @@
             "delivery_time": 5,
             "delivery_price": 6,
             "reduction": 0,
-            "img_1": "sneakers/sneaker1/img1.jpg",
-            "img_2": "sneakers/sneaker1/img2.jpg",
-            "img_3": "sneakers/sneaker1/img3.jpg",
+            "img_1": "assets/kits/kit1/img1.jpg",
+            "img_2": "assets/kits/kit1/img2.jpg",
+            "img_3": "assets/kits/kit1/img3.jpg",
             "available": true,
             "sizes": "36.5;37;38;38.5;39;40;40.5;41;42;43;43.5;44;45;45.5;46"
         },

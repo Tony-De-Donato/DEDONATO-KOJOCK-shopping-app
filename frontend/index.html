@@ -10,29 +10,47 @@
 
 <body>
     <header>
-        <img src="https://www.freepnglogos.com/uploads/nike-logo-clipart-png-1.png" alt="logo" width="100px">
+        <img src="" alt="logo" width="100px">
         <div></div>
-        
-        <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png" alt="cart" width="50px">
-        
+
+        <img src="assets/icons/icons8-buying-80.png" alt="cart" width="50px">
+
 
     </header>
-    <button class="sneakers_button">get kits</button>
+    <div id="filters">
+        <button class="sneakers_button">refresh</button>
 
-    <div class="color-picker-ctn">
-        <div class="picker round all selected" name="all">All</div>
-        <div class="picker round red" name="red"></div>
-        <div class="picker round blue" name="blue"></div>
-        <div class="picker round green" name="green"></div>
-        <div class="picker round yellow" name="yellow"></div>
-        <div class="picker round orange"></div>
+        <div class="box">
+            <select>
+                <option>Toutes marques</option>
+                <option>Nissan</option>
+                <option>Toyota</option>
+                <option>Ford</option>
+                <option>Bmw</option>
+            </select>
+        </div>
+        <div class="box">
+            <select>
+                <option>Tous types</option>
+                <option>Jdm</option>
+                <option>Euro</option>
+                <option>Us</option>
+            </select>
+        </div>
+
     </div>
+
+
+
+
     <div id="article-cards">
-        
+        <!-- contient les carte représentant les voitures -->
     </div>
+
+
+
 
     <script src="main.js"></script>
-
 </body>
 
 </html>
@@ -41,9 +59,14 @@
     * {
         box-sizing: border-box;
     }
+
     body {
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     header {
@@ -51,9 +74,18 @@
         justify-content: space-between;
         align-items: center;
         height: 20vh;
-        width: 100vh;
+        width: 98vw;
         background-color: #ffffff;
         border-bottom: 1px solid black;
+        padding: 0 2vw;
+    }
+
+    #filters {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 13vh;
+        width: 100vw;
     }
 
     #article-cards {
@@ -62,6 +94,7 @@
         justify-content: center;
         gap: 20px;
     }
+
     .color-picker-ctn {
         display: flex;
         justify-content: center;
@@ -99,5 +132,42 @@
 
     .red {
         background-color: red;
+    }
+
+
+    /* ____________________________________ */
+
+
+
+    .box select {
+        padding: 12px;
+        width: 250px;
+        border: none;
+        font-size: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+    }
+
+    .box::before {
+        content: "\f13a";
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        font-size: 28px;
+        line-height: 45px;
+        color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
+        pointer-events: none;
+    }
+
+    .box:hover::before {
+        color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .box select option {
+        padding: 30px;
     }
 </style>
