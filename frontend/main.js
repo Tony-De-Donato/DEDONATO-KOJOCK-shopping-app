@@ -37,12 +37,12 @@ function getSneakers() {
                 const productPrice = document.createElement('p');
                 productPrice.classList.add('price');
                 productPrice.innerText = `${product.price}€`;
-                if (product.original-price != product.price) {
-                    const originalPrice = document.createElement('span');
-                    originalPrice.classList.add('original-price');
-                    originalPrice.innerText = `${product.originalPrice}€`;
-                    productPrice.innerHTML = `${originalPrice.outerHTML} ${product.price}€`;
-                }
+                // if (product.original-price != product.price) {
+                //     const originalPrice = document.createElement('span');
+                //     originalPrice.classList.add('original-price');
+                //     originalPrice.innerText = `${product.originalPrice}€`;
+                //     productPrice.innerHTML = `${originalPrice.outerHTML} ${product.price}€`;
+                // }
 
                 const addToCartButton = document.createElement('button');
                 addToCartButton.classList.add('add-to-cart');
