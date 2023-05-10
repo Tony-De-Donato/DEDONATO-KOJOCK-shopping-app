@@ -68,9 +68,9 @@ function display_kits(data) {
         addToCartButton.classList.add('add-to-cart');
         addToCartButton.innerText = 'Ajouter au panier';
 
-        const productDetailsButton = document.createElement('a');
+        
+        const productDetailsButton = document.createElement('div');
         productDetailsButton.classList.add('product-details');
-        productDetailsButton.href = product.details;
         productDetailsButton.innerText = 'Voir la fiche produit';
 
         // Ajout des éléments HTML à la carte du produit

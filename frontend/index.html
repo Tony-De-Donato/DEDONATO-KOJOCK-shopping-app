@@ -64,7 +64,7 @@
 </html>
 
 <style>
-   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
     * {
         box-sizing: border-box;
@@ -110,10 +110,12 @@
         font-weight: bold;
         cursor: pointer;
     }
+
     #refresh_button:hover {
         scale: 1.1;
         transition: 1s;
     }
+
     #refresh_button:not(:hover) {
         scale: 1;
         transition: 1s;
@@ -161,7 +163,7 @@
         align-items: center;
         width: 80%;
         font-size: xx-large;
-        margin-bottom:  2vh;
+        margin-bottom: 2vh;
     }
 
 
@@ -189,7 +191,7 @@
         color: rgba(255, 255, 255, 0.5);
         background-color: rgba(255, 255, 255, 0.1);
         pointer-events: none;
-       
+
     }
 
     .box:hover::before {
@@ -203,5 +205,49 @@
 
     .box select option {
         padding: 30px;
+    }
+
+
+    .add-to-cart {
+        width: 55%;
+        padding: 1vh;
+        font-size: large;
+        background-color: rgb(228, 228, 228);
+        border: none;
+        border-radius: 3vh;
+    }
+
+    .add-to-cart:hover {
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        scale: 1.1;
+        transition: 1s;
+    }
+
+    .add-to-cart:not(:hover) {
+        transition: 1s;
+    }
+
+
+    .product-details {
+        margin: 3vh 0;
+        padding: 1vh;
+        width: 70%;
+        height: 15%;
+        border: 2px solid black;
+        border-radius: 3vh;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .product-details:hover {
+        cursor: pointer;
+        background-color: rgb(228, 228, 228);
+        scale: 1.1;
+        transition: 1s;
+    }
+
+    .product-details:not(:hover) {
+        transition: 1s;
     }
 </style>
