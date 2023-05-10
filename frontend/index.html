@@ -10,13 +10,17 @@
 
 <body>
     <header>
-        
-        <div style="height: 15vh;width: max-content; display: flex; justify-content: center;align-items: center;">
+        <div style="width: 30vw;height: 15vh; display: flex; justify-content: start;align-items: center;">
             <img src="assets/icons/gr.jpg" alt="logo gazoo racing" height="98%">
             <img src="assets/icons/nismo.jpg" alt="logo nismo" height="98%">
         </div>
+        <div style="width: 30vw;text-align: center; font-size: xxx-large; font-weight: bold;">
+            KIT MY CAR
+        </div>
+        <div style="width: 30vw;height: 15vh;display: flex;align-items: center;justify-content: end;">
+            <img src="assets/icons/icons8-buying-80.png" alt="cart" height="100%" id="panier">
+        </div>
 
-        <img src="assets/icons/icons8-buying-80.png" alt="cart" height="100%">
 
 
     </header>
@@ -30,6 +34,7 @@
                 <option>Toyota</option>
                 <option>Ford</option>
                 <option>Bmw</option>
+                <option>Porsche</option>
             </select>
         </div>
         <div class="box">
@@ -59,8 +64,11 @@
 </html>
 
 <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
     * {
         box-sizing: border-box;
+
     }
 
     body {
@@ -70,6 +78,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: roboto;
     }
 
     header {
@@ -91,7 +100,7 @@
         width: 100vw;
     }
 
-    #refresh_button{
+    #refresh_button {
         padding: 1vh;
         height: 50%;
         border-radius: 3vh;
@@ -102,6 +111,12 @@
         cursor: pointer;
     }
 
+    #aucun_resultat {
+        display: none;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+
     #article-cards {
         display: flex;
         flex-wrap: wrap;
@@ -109,7 +124,7 @@
         gap: 20px;
     }
 
-    .product-card{
+    .product-card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -123,12 +138,21 @@
         margin: 3vw;
     }
 
-    .product-image{
+    .product-image {
         width: 100%;
     }
 
-    .original-price{
+    .original-price {
         text-decoration: line-through;
+        color: rgb(179, 0, 0);
+    }
+
+    .price-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        font-size: xx-large;
     }
 
 
@@ -161,9 +185,10 @@
     .box:hover::before {
         color: rgba(255, 255, 255, 0.6);
         background-color: rgba(255, 255, 255, 0.2);
-        
+
     }
-    select:hover{
+
+    select:hover {
         cursor: pointer;
     }
 
