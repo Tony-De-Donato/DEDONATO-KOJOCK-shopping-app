@@ -136,16 +136,26 @@ function getKits() {
 
                 document.querySelector("#description").innerText = product.description;
 
+                document.querySelector("#selected_price").innerText = product.reduction;
+
                 let choix_a_afficher = choix.options[choix.selectedIndex].text;
-                choix_a_afficher.addEventListener("change", function () {
+                choix.addEventListener("change", function () {
                   choix_a_afficher = choix.options[choix.selectedIndex].text;
-                  if (choix_a_afficher == "Kit entier") {
+                  if (choix_a_afficher == "kit complet") {
+                    if (product.reduction != product.price) {
+                      const cutPrice = document.createElement('span');
+                      cutPrice.classList.add('original-price');
+                      cutPrice.innerText = `${product.price}€`;
+                      document.querySelector("#selected_price").innerHTML = `${cutPrice.outerHTML} ${product.reduction}€`;
+                    } else {
+                      document.querySelector("#selected_price").innerText = product.reduction;
+                    }
                     document.querySelector("#selected_price").innerText = product.reduction;
-                  }else if (choix_a_afficher == "pare-choc avant") {
+                  } else if (choix_a_afficher == "pare-choc avant") {
                     document.querySelector("#selected_price").innerText = product.parts.pare_choc_avant;
-                  }else if (choix_a_afficher == "pare-choc avant") {
+                  } else if (choix_a_afficher == "pare-choc arrière") {
                     document.querySelector("#selected_price").innerText = product.parts.pare_choc_arriere;
-                  }else if (choix_a_afficher == "élargisseurs d'ailes") {
+                  } else if (choix_a_afficher == "élargisseurs d'ailes") {
                     document.querySelector("#selected_price").innerText = product.parts.elargisseurs_ailes;
                   }
                 });
@@ -227,4 +237,4 @@ function closeCard() {
   document.getElementById('blur').style.display = 'none';
 }
 
-document.querySelector('leave_details').addEventListener('click', closeCard);
+document.querySelector('#leave_details').addEventListener('click', closeCard);

@@ -88,19 +88,29 @@
                 <div id="details_header">
                     <h1 id="details_title"></h1>
                     <button class="close_button" onclick="closeCard()">
-                        <img id="leave_details" src="assets/icons/icons8-cross-96.png" alt="leave details" height="100%">
+                        <img id="leave_details" src="assets/icons/icons8-cross-96.png" alt="leave details"
+                            height="100%">
                     </button>
                 </div>
                 <div id="description" class="over_hidden"></div>
-                <div class="box">
-                    <select id="choix_piece">
-                        <option>kit entier</option>
-                        <option>pare-choc avant</option>
-                        <option>pare-choc arrière</option>
-                        <option>élargisseurs d'ailes</option>
-                    </select>
+                <div id="choice_container">
+                    <div class="box">
+                        <select id="choix_piece">
+                            <option>kit complet</option>
+                            <option>pare-choc avant</option>
+                            <option>pare-choc arrière</option>
+                            <option>élargisseurs d'ailes</option>
+                        </select>
+                    </div>
+                    <div id="price_ctn">
+                        <div id="selected_price"></div>
+                        <div>€</div>
+                    </div>
+                    
                 </div>
-                <div id="selected_price"></div>
+
+                <div id="ajouter_avec_choix">Ajouter au panier</div>
+
             </div>
         </div>
     </div>
