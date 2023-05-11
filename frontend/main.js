@@ -6,6 +6,9 @@ const btn = document.querySelector("#refresh_button");
 
 let kits;
 
+
+// ______________________________  filtrage  _________________________________________
+
 btn.addEventListener("click", refresh);
 
 function refresh() {
@@ -83,10 +86,10 @@ function display_kits(data) {
         // Ajout de la carte du produit au conteneur
         articleCardsContainer.appendChild(productCard);
     })
-
-
 }
 
+
+// ______________________________  recup tous les kits de l'api  _________________________________________
 
 function getKits() {
     fetch(url + 'kit')
@@ -100,6 +103,30 @@ function getKits() {
         });
 }
 
+
+
+// ______________________________  set actual select  _________________________________________
+
+
+
+// ______________________________  slider  _________________________________________
+
+const sliders = document.querySelector(".thumbnail");
+sliders.addEventListener("click", changeslide(sliders.value) )
+
+slider_img = document.querySelector("#image_carousel");
+
+function changeslide(val) {
+    if (val == 1) {
+        slider_img.src = product.img_1;
+    }
+    if (val == 2) {
+        productImage.src = product.img_2;
+    }
+    if (val == 3) {
+        productImage.src = product.img_3;
+    }
+}
 
 
 getKits();
