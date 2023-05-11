@@ -126,27 +126,34 @@ function filtered_kits() {
             document.querySelector("#details_title").innerText = product.name;
 
             document.querySelector("#description").innerText = product.description;
-
-            document.querySelector("#selected_price").innerText = product.reduction;
+            if (product.reduction != product.price) {
+              document.querySelector("#reduction_barree").innerText = product.price;
+              console.log(product.price);
+              document.querySelector("#selected_price").innerText = product.reduction;
+            } else {
+              document.querySelector("#selected_price").innerText = product.reduction;
+            }
 
             let choix_a_afficher = choix.options[choix.selectedIndex].text;
             choix.addEventListener("change", function () {
               choix_a_afficher = choix.options[choix.selectedIndex].text;
               if (choix_a_afficher == "kit complet") {
                 if (product.reduction != product.price) {
-                  const cutPrice = document.createElement('span');
-                  cutPrice.classList.add('original-price');
-                  document.querySelector("#reduction_barree").innerHTML = `${product.price}€`;
-                  document.querySelector("#selected_price").innerHTML = `${product.reduction}`;
+                  document.querySelector("#reduction_barree").innerText = product.price;
+                  console.log(product.price);
+                  document.querySelector("#selected_price").innerText = product.reduction;
                 } else {
                   document.querySelector("#selected_price").innerText = product.reduction;
                 }
                 document.querySelector("#selected_price").innerText = product.reduction;
               } else if (choix_a_afficher == "pare-choc avant") {
+                document.querySelector("#reduction_barree").innerText = "";
                 document.querySelector("#selected_price").innerText = product.parts.pare_choc_avant;
               } else if (choix_a_afficher == "pare-choc arrière") {
+                document.querySelector("#reduction_barree").innerText = "";
                 document.querySelector("#selected_price").innerText = product.parts.pare_choc_arriere;
               } else if (choix_a_afficher == "élargisseurs d'ailes") {
+                document.querySelector("#reduction_barree").innerText = "";
                 document.querySelector("#selected_price").innerText = product.parts.elargisseurs_ailes;
               }
             });

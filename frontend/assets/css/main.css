@@ -396,3 +396,14 @@ select:hover {
 #ajouter_avec_choix:not(:hover) {
     transition: 1s;
 }
+
+
+#reduction_barree{
+    text-decoration: line-through;
+    color: rgb(179, 0, 0);
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
