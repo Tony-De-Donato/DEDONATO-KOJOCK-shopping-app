@@ -11,10 +11,10 @@
             "img_2": "assets/kits/kit1/img2.jpg",
             "img_3": "assets/kits/kit1/img3.jpg",
             "parts": {
-                "pare-choc avant": 1800,
-                "pare-choc arrière": 600,
-                "élargisseurs d'ailes": 1200,
-                "kit entier": 6000
+                "pare_choc_avant": 1800,
+                "pare_choc_arriere": 600,
+                "elargisseurs_ailes": 1200,
+                "kit_complet": 6000
             },
             "description": "En résumé, la Nissan 400Z est un coupé sportif élégant et performant qui combine un design classique inspiré de la Z-car d'origine avec des technologies modernes pour offrir une expérience de conduite dynamique."
         },
@@ -29,10 +29,10 @@
             "img_2": "assets/kits/kit2/img2.jpg",
             "img_3": "assets/kits/kit2/img3.jpg",
             "parts": {
-                "pare-choc avant": 1000,
-                "pare-choc arrière": 900,
-                "élargisseurs d'ailes": 1200,
-                "kit entier": 6100
+                "pare_choc_avant": 1000,
+                "pare_choc_arriere": 900,
+                "elargisseurs_ailes": 1200,
+                "kit_complet": 6100
             },
             "description": "La Toyota Yaris GR est une citadine sportive équipée d'un moteur 3 cylindres 1.6L turbo de 261 ch, 4 roues motrices et une boîte manuelle 6 vitesses. Elle offre des performances élevées, un design agressif et une expérience de conduite exaltante."
         },
@@ -47,10 +47,10 @@
             "img_2": "assets/kits/kit3/img2.jpg",
             "img_3": "assets/kits/kit3/img3.jpg",
             "parts": {
-                "pare-choc avant": 1080,
-                "pare-choc arrière": 550,
-                "élargisseurs d'ailes": 870,
-                "kit entier": 5980
+                "pare_choc_avant": 1080,
+                "pare_choc_arriere": 550,
+                "elargisseurs_ailes": 870,
+                "kit_complet": 5980
             },
             "description": "La Toyota GR86 est un coupé sportif, équipé d'un moteur boxer 4 cylindres 2.4L de 228 ch, propulsion arrière et boîte manuelle 6 vitesses. Elle offre une conduite agile, un design élégant et une expérience de conduite engageante pour les amateurs de sport automobile."
         },
@@ -65,10 +65,10 @@
             "img_2": "assets/kits/kit4/img2.jpg",
             "img_3": "assets/kits/kit4/img3.jpg",
             "parts": {
-                "pare-choc avant": 1100,
-                "pare-choc arrière": 1320,
-                "élargisseurs d'ailes": 1320,
-                "kit entier": 7350
+                "pare_choc_avant": 1100,
+                "pare_choc_arriere": 1320,
+                "elargisseurs_ailes": 1320,
+                "kit_complet": 7350
             },
             "description": "La Corvette C8 est une voiture de sport américaine avec un moteur V8 6.2L de 490 ch, position central-arrière, et une boîte auto 8 vitesses. Elle offre des performances impressionnantes, un design audacieux et une expérience de conduite inoubliable pour les passionnés."
         },
@@ -83,10 +83,10 @@
             "img_2": "assets/kits/kit5/img2.jpg",
             "img_3": "assets/kits/kit5/img3.jpg",
             "parts": {
-                "pare-choc avant": 550,
-                "pare-choc arrière": 700,
-                "élargisseurs d'ailes": 1270,
-                "kit entier": 3400
+                "pare_choc_avant": 550,
+                "pare_choc_arriere": 700,
+                "elargisseurs_ailes": 1270,
+                "kit_complet": 3400
             },
             "description": "La BMW M3 E30 est une icône des années 80, dotée d'un moteur 4 cylindres 2.3L de 200 ch, propulsion arrière et boîte manuelle 5 vitesses. Elle offre une conduite dynamique, un design intemporel et une expérience de conduite authentique pour les passionnés de voitures classiques."
         },
@@ -101,10 +101,10 @@
             "img_2": "assets/kits/kit6/img2.jpg",
             "img_3": "assets/kits/kit6/img3.jpg",
             "parts": {
-                "pare-choc avant": 990,
-                "pare-choc arrière": 808,
-                "élargisseurs d'ailes": 3790,
-                "kit entier": 5350
+                "pare_choc_avant": 990,
+                "pare_choc_arriere": 808,
+                "elargisseurs_ailes": 3790,
+                "kit_complet": 5350
             },
             "description": "La Porsche Cayman 987 est un coupé sportif des années 2000, avec un moteur flat-6 de 2.7L à 3.4L (245-320 ch), position central-arrière et boîtes manuelle ou PDK. Elle offre une conduite précise, un design élégant et une expérience de conduite équilibrée pour les amateurs de sport automobile."
         },
@@ -119,10 +119,10 @@
             "img_2": "assets/kits/kit7/img2.jpg",
             "img_3": "assets/kits/kit7/img3.jpg",
             "parts": {
-                "pare-choc avant": 1420,
-                "pare-choc arrière": 950,
-                "élargisseurs d'ailes": 2200,
-                "kit entier": 4800
+                "pare_choc_avant": 1420,
+                "pare_choc_arriere": 950,
+                "elargisseurs_ailes": 2200,
+                "kit_complet": 4800
             },
             "description": "La Ford Raptor est un pick-up haute performance avec un moteur V6 3.5L EcoBoost de 450 ch, 4 roues motrices et une boîte auto 10 vitesses. Elle offre des capacités hors route impressionnantes, un design robuste et une expérience de conduite polyvalente pour les aventuriers intrépides."
         },
@@ -137,10 +137,10 @@
             "img_2": "assets/kits/kit8/img2.jpg",
             "img_3": "assets/kits/kit8/img3.jpg",
             "parts": {
-                "pare-choc avant": 2100,
-                "pare-choc arrière": 900,
-                "élargisseurs d'ailes": 1920,
-                "kit entier": 5100
+                "pare_choc_avant": 2100,
+                "pare_choc_arriere": 900,
+                "elargisseurs_ailes": 1920,
+                "kit_complet": 5100
             },
             "description": "La Nissan Titan est un pick-up plein format doté d'un moteur V8 5.6L de 400 ch, propulsion ou 4 roues motrices et une boîte auto 9 vitesses. Elle offre une capacité de remorquage solide, un design imposant et une expérience de conduite pratique pour les besoins professionnels et personnels."
         },
@@ -155,10 +155,10 @@
             "img_2": "assets/kits/kit9/img2.jpg",
             "img_3": "assets/kits/kit9/img3.jpg",
             "parts": {
-                "pare-choc avant": 800,
-                "pare-choc arrière": 740,
-                "élargisseurs d'ailes": 1400,
-                "kit entier": 8200
+                "pare_choc_avant": 800,
+                "pare_choc_arriere": 740,
+                "elargisseurs_ailes": 1400,
+                "kit_complet": 8200
             },
             "description": "La Toyota Supra MK V est un coupé sportif équipé d'un moteur 6 cylindres en ligne 3.0L turbo de 335 ch, propulsion arrière et une boîte auto 8 vitesses. Elle offre des performances énergiques, un design moderne et une expérience de conduite enthousiasmante pour les passionnés de voitures de sport."
         },
@@ -173,10 +173,10 @@
             "img_2": "assets/kits/kit10/img2.jpg",
             "img_3": "assets/kits/kit10/img3.jpg",
             "parts": {
-                "pare-choc avant": 1600,
-                "pare-choc arrière": 1600,
-                "élargisseurs d'ailes": 1800,
-                "kit entier": 5990
+                "pare_choc_avant": 1600,
+                "pare_choc_arriere": 1600,
+                "elargisseurs_ailes": 1800,
+                "kit_complet": 5990
             },
             "description": "La Nissan Skyline GT-R R32 est une icône des années 90, dotée d'un moteur 6 cylindres en ligne 2.6L biturbo de 276 ch, 4 roues motrices et une boîte manuelle 5 vitesses. Elle offre une conduite performante, un design emblématique et une expérience de conduite légendaire pour les passionnés de voitures japonaises."
         },
@@ -191,10 +191,10 @@
             "img_2": "assets/kits/kit11/img2.jpg",
             "img_3": "assets/kits/kit11/img3.jpg",
             "parts": {
-                "pare-choc avant": 1200,
-                "pare-choc arrière": 460,
-                "élargisseurs d'ailes": 780,
-                "kit entier": 7400
+                "pare_choc_avant": 1200,
+                "pare_choc_arriere": 460,
+                "elargisseurs_ailes": 780,
+                "kit_complet": 7400
             },
             "description": "La Ford Mustang 2008 est un coupé sport emblématique, doté d'un design rétro-moderne. Équipée d'un puissant moteur V8 de 4.6L, elle délivre 300 ch et 320 lb-pi de couple. Confortable et performante, c'est une icône de l'automobile américaine."
         },
@@ -209,10 +209,10 @@
             "img_2": "assets/kits/kit12/img2.jpg",
             "img_3": "assets/kits/kit12/img3.jpg",
             "parts": {
-                "pare-choc avant": 1480,
-                "pare-choc arrière": 580,
-                "élargisseurs d'ailes": 880,
-                "kit entier": 6280
+                "pare_choc_avant": 1480,
+                "pare_choc_arriere": 580,
+                "elargisseurs_ailes": 880,
+                "kit_complet": 6280
             },
             "description": "La Chevrolet Corvette C5 (1997-2004) est une voiture de sport américaine avec un design audacieux et une performance impressionnante. Son moteur V8 LS1 de 5.7L génère 345 ch, la propulsant de 0 à 100 km/h en 4,7 s. Un classique moderne pour les amateurs de vitesse."
         },
@@ -227,10 +227,10 @@
             "img_2": "assets/kits/kit13/img2.jpg",
             "img_3": "assets/kits/kit13/img3.jpg",
             "parts": {
-                "pare-choc avant": 810,
-                "pare-choc arrière": 745,
-                "élargisseurs d'ailes": 380,
-                "kit entier": 3450
+                "pare_choc_avant": 810,
+                "pare_choc_arriere": 745,
+                "elargisseurs_ailes": 380,
+                "kit_complet": 3450
             },
             "description": "La Honda Civic EG (1992-1995) est une voiture compacte japonaise populaire pour son style distinctif à hayon et ses performances fiables. Elle est appréciée pour sa maniabilité et son économie de carburant. Idéale pour les amateurs de tuning, c'est une icône des années 90."
         },
@@ -245,10 +245,10 @@
             "img_2": "assets/kits/kit14/img2.jpg",
             "img_3": "assets/kits/kit14/img3.jpg",
             "parts": {
-                "pare-choc avant": 700,
-                "pare-choc arrière": 535,
-                "élargisseurs d'ailes": 1075,
-                "kit entier": 3900
+                "pare_choc_avant": 700,
+                "pare_choc_arriere": 535,
+                "elargisseurs_ailes": 1075,
+                "kit_complet": 3900
             },
             "description": "La Honda S2000 (1999-2009) est un roadster sportif japonais apprécié pour sa maniabilité et son moteur performant. L'AP1 (1999-2003) possède un moteur 2.0L VTEC de 240 ch, tandis que l'AP2 (2004-2009) offre une légère amélioration de la stabilité. Un classique moderne adoré des passionnés."
         },
@@ -263,10 +263,10 @@
             "img_2": "assets/kits/kit15/img2.jpg",
             "img_3": "assets/kits/kit15/img3.jpg",
             "parts": {
-                "pare-choc avant": 610,
-                "pare-choc arrière": 840,
-                "élargisseurs d'ailes": 890,
-                "kit entier": 3800
+                "pare_choc_avant": 610,
+                "pare_choc_arriere": 840,
+                "elargisseurs_ailes": 890,
+                "kit_complet": 3850
             },
             "description": "La Mercedes-Benz 190E W201 (1982-1993) est une berline compacte allemande, connue pour son élégance et sa qualité de fabrication. Dotée de moteurs fiables et économiques, elle offre un confort de conduite et une tenue de route exceptionnels. Un classique apprécié des amateurs de Mercedes."
         }

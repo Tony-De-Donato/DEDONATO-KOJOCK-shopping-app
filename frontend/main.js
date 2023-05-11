@@ -3,6 +3,7 @@ const articleCardsContainer = document.getElementById('article-cards');
 const marque = document.querySelector("#marque");
 const type = document.querySelector("#type");
 const btn = document.querySelector("#refresh_button");
+const choix = document.querySelector("#choix_piece");
 const page_detail = document.querySelector("#blur");
 let kits;
 
@@ -132,6 +133,24 @@ function getKits() {
                 slider_img.src = product.img_1;
 
                 document.querySelector("#details_title").innerText = product.name;
+
+                document.querySelector("#description").innerText = product.price;
+
+                let choix_a_afficher = choix.options[choix.selectedIndex].text;
+                choix_a_afficher.addEventListener("change", function () {
+                  choix_a_afficher = choix.options[choix.selectedIndex].text;
+                  if (choix_a_afficher == "Kit entier") {
+                    document.querySelector("#selected_price").innerText = product.reduction;
+                  }else if (choix_a_afficher == "pare-choc avant") {
+                    document.querySelector("#selected_price").innerText = product.parts.pare_choc_avant;
+                  }else if (choix_a_afficher == "pare-choc avant") {
+                    document.querySelector("#selected_price").innerText = product.parts.pare_choc_arriere;
+                  }else if (choix_a_afficher == "élargisseurs d'ailes") {
+                    document.querySelector("#selected_price").innerText = product.parts.elargisseurs_ailes;
+                  }
+                });
+
+
               }
             })
             actual = id;
