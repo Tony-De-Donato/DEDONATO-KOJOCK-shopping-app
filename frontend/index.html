@@ -21,7 +21,7 @@
         <div style="width: 30vw;height: 15vh;display: flex;align-items: center;justify-content: end;">
             <button id="panier" onclick="openCartModal()">
                 <img src="assets/icons/icons8-buying-80.png" alt="cart" height="100%">
-            </button>            
+            </button>
         </div>
     </header>
 
@@ -48,11 +48,13 @@
         <div class="box">
             <select id="marque">
                 <option>Toutes marques</option>
-                <option>Nissan</option>
-                <option>Toyota</option>
-                <option>Ford</option>
                 <option>Bmw</option>
+                <option>Ford</option>
+                <option>Honda</option> 
+                <option>Mercedes</option>
+                <option>Nissan</option>
                 <option>Porsche</option>
+                <option>Toyota</option>
             </select>
         </div>
         <div class="box">
@@ -82,8 +84,11 @@
                 </div>
             </div>
 
-            <div id="right">
-
+            <div id="right" class="side">
+                <div id="details_header">
+                    <h1 id="details_title"></h1>
+                    <img id="leave_details" src="assets/icons/icons8-cross-96.png" alt="leave details" height="100%">
+                </div>
             </div>
         </div>
     </div>

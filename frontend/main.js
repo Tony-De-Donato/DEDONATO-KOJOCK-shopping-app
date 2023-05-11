@@ -130,6 +130,8 @@ function getKits() {
                 document.querySelector("#thumb2").src = product.img_2;
                 document.querySelector("#thumb3").src = product.img_3;
                 slider_img.src = product.img_1;
+
+                document.querySelector("#details_title").innerText = product.name;
               }
             })
             actual = id;
