@@ -16,7 +16,6 @@ function refresh() {
   fetch(url + 'kit')
     .then(response => response.json())
     .then(data => {
-
       let brand = marque.options[marque.selectedIndex].text;
       let genre = type.options[type.selectedIndex].text;
 
@@ -38,6 +37,7 @@ function display_kits(data) {
   if (data.length == 0) {
     articleCardsContainer.innerHTML = "<h1>Aucun résultat ne correspond aux filtres que vous venez d'appliquer.</h1>";
   }
+  
   data.forEach(product => {
     // Création des éléments HTML pour chaque carte d'article
     const productCard = document.createElement('div');
@@ -88,10 +88,80 @@ function display_kits(data) {
     // Ajout de la carte du produit au conteneur
     articleCardsContainer.appendChild(productCard);
 
-  })
+  });
+  filtered_kits();
 }
 
 
+
+
+function filtered_kits() {
+  let actual = 1;
+  const sliders = document.querySelectorAll(".thumbnail");
+  const slider_img = document.querySelector("#image_carousel");
+  const detail_buttons = document.querySelectorAll('.product-details');
+  for (let i = 0; i < detail_buttons.length; i++) {
+    detail_buttons[i].addEventListener("click", function () {
+      actualise(detail_buttons[i].id);
+    });
+  }
+
+  console.log(document.querySelectorAll('.product-details'));
+
+
+  function actualise(id) {
+    fetch(url + 'kit')
+      .then(response => response.json())
+      .then(data => {
+        page_detail.style.display = "flex";
+        data.forEach(product => {
+          if (product.id == id) {
+            slider_img.src = product.img_1;
+            page_detail.style.display = "flex";
+            document.querySelector("#thumb1").src = product.img_1;
+            document.querySelector("#thumb2").src = product.img_2;
+            document.querySelector("#thumb3").src = product.img_3;
+            slider_img.src = product.img_1;
+
+            document.querySelector("#details_title").innerText = product.name;
+
+            document.querySelector("#description").innerText = product.description;
+
+            document.querySelector("#selected_price").innerText = product.reduction;
+
+            let choix_a_afficher = choix.options[choix.selectedIndex].text;
+            choix.addEventListener("change", function () {
+              choix_a_afficher = choix.options[choix.selectedIndex].text;
+              if (choix_a_afficher == "kit complet") {
+                if (product.reduction != product.price) {
+                  const cutPrice = document.createElement('span');
+                  cutPrice.classList.add('original-price');
+                  cutPrice.innerText = `${product.price}€`;
+                  document.querySelector("#selected_price").innerHTML = `${cutPrice.outerHTML} ${product.reduction}€`;
+                } else {
+                  document.querySelector("#selected_price").innerText = product.reduction;
+                }
+                document.querySelector("#selected_price").innerText = product.reduction;
+              } else if (choix_a_afficher == "pare-choc avant") {
+                document.querySelector("#selected_price").innerText = product.parts.pare_choc_avant;
+              } else if (choix_a_afficher == "pare-choc arrière") {
+                document.querySelector("#selected_price").innerText = product.parts.pare_choc_arriere;
+              } else if (choix_a_afficher == "élargisseurs d'ailes") {
+                document.querySelector("#selected_price").innerText = product.parts.elargisseurs_ailes;
+              }
+            });
+
+
+          }
+        });
+        actual = id;
+        console.log(actual);
+        slider();
+
+      }
+      )
+  }
+}
 // ______________________________  recup tous les kits de l'api  _________________________________________
 
 function getKits() {
@@ -105,78 +175,13 @@ function getKits() {
 
       // ______________________________  set actual select  _________________________________________
 
-      let actual = 1;
-      const sliders = document.querySelectorAll(".thumbnail");
-      const slider_img = document.querySelector("#image_carousel");
-      const detail_buttons = document.querySelectorAll('.product-details');
-      for (let i = 0; i < detail_buttons.length; i++) {
-        detail_buttons[i].addEventListener("click", function () {
-          actualise(detail_buttons[i].id);
-        });
-      }
-
-      console.log(document.querySelectorAll('.product-details'));
-
-
-      function actualise(id) {
-        fetch(url + 'kit')
-          .then(response => response.json())
-          .then(data => {
-            page_detail.style.display = "flex";
-            data.forEach(product => {
-              if (product.id == id) {
-                slider_img.src = product.img_1;
-                page_detail.style.display = "flex";
-                document.querySelector("#thumb1").src = product.img_1;
-                document.querySelector("#thumb2").src = product.img_2;
-                document.querySelector("#thumb3").src = product.img_3;
-                slider_img.src = product.img_1;
-
-                document.querySelector("#details_title").innerText = product.name;
-
-                document.querySelector("#description").innerText = product.description;
-
-                document.querySelector("#selected_price").innerText = product.reduction;
-
-                let choix_a_afficher = choix.options[choix.selectedIndex].text;
-                choix.addEventListener("change", function () {
-                  choix_a_afficher = choix.options[choix.selectedIndex].text;
-                  if (choix_a_afficher == "kit complet") {
-                    if (product.reduction != product.price) {
-                      const cutPrice = document.createElement('span');
-                      cutPrice.classList.add('original-price');
-                      cutPrice.innerText = `${product.price}€`;
-                      document.querySelector("#selected_price").innerHTML = `${cutPrice.outerHTML} ${product.reduction}€`;
-                    } else {
-                      document.querySelector("#selected_price").innerText = product.reduction;
-                    }
-                    document.querySelector("#selected_price").innerText = product.reduction;
-                  } else if (choix_a_afficher == "pare-choc avant") {
-                    document.querySelector("#selected_price").innerText = product.parts.pare_choc_avant;
-                  } else if (choix_a_afficher == "pare-choc arrière") {
-                    document.querySelector("#selected_price").innerText = product.parts.pare_choc_arriere;
-                  } else if (choix_a_afficher == "élargisseurs d'ailes") {
-                    document.querySelector("#selected_price").innerText = product.parts.elargisseurs_ailes;
-                  }
-                });
-
-
-              }
-            })
-            actual = id;
-            slider();
-
-          }
-          )
-      }
+      filtered_kits();
 
 
 
       // ______________________________  slider  _________________________________________
 
       function slider() {
-        console.log(sliders);
-        console.log(actual);
 
         for (let i = 0; i < sliders.length; i++) {
           sliders[i].addEventListener("click", function () {
