@@ -112,23 +112,26 @@ getKits();
 
 // ______________________________  slider  _________________________________________
 
-const sliders = document.querySelector(".thumbnail");
-sliders.addEventListener("click", changeslide(sliders.value))
+const sliders = document.querySelectorAll(".thumbnail");
+const slider_img = document.querySelector("#image_carousel");
 
-slider_img = document.querySelector("#image_carousel");
-
-function changeslide(val) {
-    if (val == 1) {
-        slider_img.src = product.img_1;
-    }
-    if (val == 2) {
-        productImage.src = product.img_2;
-    }
-    if (val == 3) {
-        productImage.src = product.img_3;
-    }
+for (let i = 0; i < sliders.length; i++) {
+  sliders[i].addEventListener("click", function() {
+    changeslide(sliders[i].value);
+  });
 }
 
+function changeslide(val) {
+  if (val == 1) {
+    slider_img.src = "assets/kits/kit1/img1.jpg";
+  }
+  if (val == 2) {
+    slider_img.src = "assets/kits/kit1/img2.jpg";
+  }
+  if (val == 3) {
+    slider_img.src = "assets/kits/kit1/img3.jpg";
+  }
+}
 // ______________________________  set actual select  _________________________________________
 
 const page_detail = document.querySelector("#blur");
