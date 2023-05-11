@@ -56,9 +56,9 @@
         },
         {
             "id": 4,
-            "name": "Chevrollet Corvette C8",
+            "name": "Chevrolet Corvette C8",
             "price": 8000,
-            "brand": "Chevrollet",
+            "brand": "Chevrolet",
             "type": "US",
             "reduction": 7350,
             "img_1": "assets/kits/kit4/img1.jpg",
@@ -179,6 +179,96 @@
                 "kit entier": 5990
             },
             "description": "La Nissan Skyline GT-R R32 est une icône des années 90, dotée d'un moteur 6 cylindres en ligne 2.6L biturbo de 276 ch, 4 roues motrices et une boîte manuelle 5 vitesses. Elle offre une conduite performante, un design emblématique et une expérience de conduite légendaire pour les passionnés de voitures japonaises."
+        },
+        {
+            "id": 11,
+            "name": "Ford Mustang 2008",
+            "price": 7480,
+            "brand": "Ford",
+            "type": "US",
+            "reduction": 7400,
+            "img_1": "assets/kits/kit11/img1.jpg",
+            "img_2": "assets/kits/kit11/img2.jpg",
+            "img_3": "assets/kits/kit11/img3.jpg",
+            "parts": {
+                "pare-choc avant": 1200,
+                "pare-choc arrière": 460,
+                "élargisseurs d'ailes": 780,
+                "kit entier": 7400
+            },
+            "description": "La Ford Mustang 2008 est un coupé sport emblématique, doté d'un design rétro-moderne. Équipée d'un puissant moteur V8 de 4.6L, elle délivre 300 ch et 320 lb-pi de couple. Confortable et performante, c'est une icône de l'automobile américaine."
+        },
+        {
+            "id": 12,
+            "name": "Chevrolet Corvette C5",
+            "price": 6600,
+            "brand": "Chevrolet",
+            "type": "US",
+            "reduction": 6280,
+            "img_1": "assets/kits/kit12/img1.jpg",
+            "img_2": "assets/kits/kit12/img2.jpg",
+            "img_3": "assets/kits/kit12/img3.jpg",
+            "parts": {
+                "pare-choc avant": 1480,
+                "pare-choc arrière": 580,
+                "élargisseurs d'ailes": 880,
+                "kit entier": 6280
+            },
+            "description": "La Chevrolet Corvette C5 (1997-2004) est une voiture de sport américaine avec un design audacieux et une performance impressionnante. Son moteur V8 LS1 de 5.7L génère 345 ch, la propulsant de 0 à 100 km/h en 4,7 s. Un classique moderne pour les amateurs de vitesse."
+        },
+        {
+            "id": 13,
+            "name": "Honda EG Civic",
+            "price": 4000,
+            "brand": "Honda",
+            "type": "JDM",
+            "reduction": 3450,
+            "img_1": "assets/kits/kit13/img1.jpg",
+            "img_2": "assets/kits/kit13/img2.jpg",
+            "img_3": "assets/kits/kit13/img3.jpg",
+            "parts": {
+                "pare-choc avant": 810,
+                "pare-choc arrière": 745,
+                "élargisseurs d'ailes": 380,
+                "kit entier": 3450
+            },
+            "description": "La Honda Civic EG (1992-1995) est une voiture compacte japonaise populaire pour son style distinctif à hayon et ses performances fiables. Elle est appréciée pour sa maniabilité et son économie de carburant. Idéale pour les amateurs de tuning, c'est une icône des années 90."
+        },
+        {
+            "id": 14,
+            "name": "Honda S2000 AP1 AP2 (2000-2009)",
+            "price": 4310,
+            "brand": "Honda",
+            "type": "JDM",
+            "reduction": 3900,
+            "img_1": "assets/kits/kit14/img1.jpg",
+            "img_2": "assets/kits/kit14/img2.jpg",
+            "img_3": "assets/kits/kit14/img3.jpg",
+            "parts": {
+                "pare-choc avant": 700,
+                "pare-choc arrière": 535,
+                "élargisseurs d'ailes": 1075,
+                "kit entier": 3900
+            },
+            "description": "La Honda S2000 (1999-2009) est un roadster sportif japonais apprécié pour sa maniabilité et son moteur performant. L'AP1 (1999-2003) possède un moteur 2.0L VTEC de 240 ch, tandis que l'AP2 (2004-2009) offre une légère amélioration de la stabilité. Un classique moderne adoré des passionnés."
+        },
+        {
+            "id": 15,
+            "name": "Mercedes Benz 190E W201",
+            "price": 3850,
+            "brand": "Mercedes",
+            "type": "EURO",
+            "reduction": 3800,
+            "img_1": "assets/kits/kit15/img1.jpg",
+            "img_2": "assets/kits/kit15/img2.jpg",
+            "img_3": "assets/kits/kit15/img3.jpg",
+            "parts": {
+                "pare-choc avant": 610,
+                "pare-choc arrière": 840,
+                "élargisseurs d'ailes": 890,
+                "kit entier": 3800
+            },
+            "description": "La Mercedes-Benz 190E W201 (1982-1993) est une berline compacte allemande, connue pour son élégance et sa qualité de fabrication. Dotée de moteurs fiables et économiques, elle offre un confort de conduite et une tenue de route exceptionnels. Un classique apprécié des amateurs de Mercedes."
         }
     ]
 }
