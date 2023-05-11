@@ -245,21 +245,28 @@ function SimplyAddToCart(actual1) {
     .then(data => {
       data.forEach(product => {
         if (product.id == actual1) {
+          let theID = parseInt(product.id) + "-kit";
 
-          if (localStorage.getItem(parseInt(product.id) + "-kit") == null) {
-            let copy = JSON.parse(localStorage.getItem(product.id + "-kit"));
+          if (localStorage.getItem(theID) != null) {
+            let copy = JSON.parse(localStorage.getItem(theID));
+            copy.quantity++;
+            localStorage.removeItem(theID);
+            localStorage.setItem(theID, JSON.stringify(copy));
+            console.log("produit ajouté");
+
+
+          } else {
+            const produit = {
+              id: theID,
+              name: product.name + "- Kit complet",
+              price: product.reduction,
+              img: product.img_1,
+              quantity: 1,
+
+            };
+            localStorage.setItem(produit.id, JSON.stringify(produit));
           }
-          const produit = {
-            id: parseInt(product.id) + "-kit",
-            name: product.name + "- Kit complet",
-            price: product.reduction,
-            img: product.img_1,
-            quantity: 1,
 
-          };
-          localStorage.setItem(produit.id, JSON.stringify(produit));
-        } else {
-          console.log("erreur, produit non trouvé");
         }
       });
     })
