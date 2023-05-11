@@ -12,96 +12,96 @@ let kits;
 btn.addEventListener("click", refresh);
 
 function refresh() {
-    fetch(url + 'kit')
-        .then(response => response.json())
-        .then(data => {
+  fetch(url + 'kit')
+    .then(response => response.json())
+    .then(data => {
 
-            let brand = marque.options[marque.selectedIndex].text;
-            let genre = type.options[type.selectedIndex].text;
+      let brand = marque.options[marque.selectedIndex].text;
+      let genre = type.options[type.selectedIndex].text;
 
-            if (brand != "Toutes marques") {
-                data = data.filter(kit => kit.brand == brand);
-            }
-            if (genre != "Tous types") {
-                data = data.filter(kit => kit.type == genre);
-            }
-            display_kits(data);
-        })
-        .catch(err => {
-            console.log(err);
-        });
+      if (brand != "Toutes marques") {
+        data = data.filter(kit => kit.brand == brand);
+      }
+      if (genre != "Tous types") {
+        data = data.filter(kit => kit.type == genre);
+      }
+      display_kits(data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
 }
 
 function display_kits(data) {
-    articleCardsContainer.innerHTML = "";
-    if (data.length == 0) {
-        articleCardsContainer.innerHTML = "<h1>Aucun résultat ne correspond aux filtres que vous venez d'appliquer.</h1>";
+  articleCardsContainer.innerHTML = "";
+  if (data.length == 0) {
+    articleCardsContainer.innerHTML = "<h1>Aucun résultat ne correspond aux filtres que vous venez d'appliquer.</h1>";
+  }
+  data.forEach(product => {
+    // Création des éléments HTML pour chaque carte d'article
+    const productCard = document.createElement('div');
+    productCard.classList.add('product-card');
+
+
+    const productImage = document.createElement('img');
+    productImage.classList.add('product-image');
+    productImage.src = product.img_1;
+    productImage.onmouseover = () => {
+      productImage.src = product.img_2;
     }
-    data.forEach(product => {
-        // Création des éléments HTML pour chaque carte d'article
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card');
+    productImage.onmouseout = () => {
+      productImage.src = product.img_1;
+    }
+
+    const productTitle = document.createElement('h1');
+    productTitle.innerText = product.name;
+    const price_container = document.createElement('div');
+    price_container.classList.add('price-container');
+
+    if (product.reduction != product.price) {
+      const originalPrice = document.createElement('span');
+      originalPrice.classList.add('original-price');
+      originalPrice.innerText = `${product.price}€`;
+      price_container.innerHTML = `${originalPrice.outerHTML} ${product.reduction}€`;
+    } else {
+      price_container.innerHTML = `${product.price}€`;
+    }
+
+    const addToCartButton = document.createElement('button');
+    addToCartButton.classList.add('add-to-cart');
+    addToCartButton.innerText = 'Ajouter au panier';
 
 
-        const productImage = document.createElement('img');
-        productImage.classList.add('product-image');
-        productImage.src = product.img_1;
-        productImage.onmouseover = () => {
-            productImage.src = product.img_2;
-        }
-        productImage.onmouseout = () => {
-            productImage.src = product.img_1;
-        }
+    const productDetailsButton = document.createElement('div');
+    productDetailsButton.classList.add('product-details');
+    productDetailsButton.id = product.id;
+    productDetailsButton.innerText = 'Voir la fiche produit';
 
-        const productTitle = document.createElement('h1');
-        productTitle.innerText = product.name;
-        const price_container = document.createElement('div');
-        price_container.classList.add('price-container');
+    // Ajout des éléments HTML à la carte du produit
+    productCard.appendChild(productImage);
+    productCard.appendChild(productTitle);
+    productCard.appendChild(price_container);
+    productCard.appendChild(addToCartButton);
+    productCard.appendChild(productDetailsButton);
 
-        if (product.reduction != product.price) {
-            const originalPrice = document.createElement('span');
-            originalPrice.classList.add('original-price');
-            originalPrice.innerText = `${product.price}€`;
-            price_container.innerHTML = `${originalPrice.outerHTML} ${product.reduction}€`;
-        } else {
-            price_container.innerHTML = `${product.price}€`;
-        }
-
-        const addToCartButton = document.createElement('button');
-        addToCartButton.classList.add('add-to-cart');
-        addToCartButton.innerText = 'Ajouter au panier';
-
-
-        const productDetailsButton = document.createElement('div');
-        productDetailsButton.classList.add('product-details');
-        productDetailsButton.id = product.id;
-        productDetailsButton.innerText = 'Voir la fiche produit';
-
-        // Ajout des éléments HTML à la carte du produit
-        productCard.appendChild(productImage);
-        productCard.appendChild(productTitle);
-        productCard.appendChild(price_container);
-        productCard.appendChild(addToCartButton);
-        productCard.appendChild(productDetailsButton);
-
-        // Ajout de la carte du produit au conteneur
-        articleCardsContainer.appendChild(productCard);
-    })
+    // Ajout de la carte du produit au conteneur
+    articleCardsContainer.appendChild(productCard);
+  })
 }
 
 
 // ______________________________  recup tous les kits de l'api  _________________________________________
 
 function getKits() {
-    fetch(url + 'kit')
-        .then(response => response.json())
-        .then(data => {
-            display_kits(data);
-        }
-        )
-        .catch(err => {
-            console.log(err);
-        });
+  fetch(url + 'kit')
+    .then(response => response.json())
+    .then(data => {
+      display_kits(data);
+    }
+    )
+    .catch(err => {
+      console.log(err);
+    });
 }
 getKits();
 
@@ -116,7 +116,7 @@ const sliders = document.querySelectorAll(".thumbnail");
 const slider_img = document.querySelector("#image_carousel");
 
 for (let i = 0; i < sliders.length; i++) {
-  sliders[i].addEventListener("click", function() {
+  sliders[i].addEventListener("click", function () {
     changeslide(sliders[i].value);
   });
 }
@@ -135,33 +135,31 @@ function changeslide(val) {
 // ______________________________  set actual select  _________________________________________
 
 const page_detail = document.querySelector("#blur");
-document.addEventListener("DOMContentLoaded", function() {
-    const access_detail = document.querySelectorAll(".product-details");
-    console.log(access_detail);
-  
-    for (var i = 0; i < access_detail.length; i++) {
-      access_detail[i].addEventListener("click", function() {
-        actualise(access_detail[i].id);
-      });
-    }
+const access_detail = document.querySelectorAll('.product-details');
+console.log(access_detail);
+
+for (var i = 0; i < access_detail.length; i++) {
+  access_detail[i].addEventListener("click", function () {
+    actualise(access_detail[i].id);
   });
+}
 
 function actualise(id) {
-    fetch(url + 'kit')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(product => {
-                if (product.id == id) {
-                    slider_img.src = product.img_1;
-                    page_detail.style.display = "flex";
-                    document.querySelector("#thumb1").src = product.img_1;
-                    document.querySelector("#thumb2").src = product.img_2;
-                    document.querySelector("#thumb3").src = product.img_3;
-                    slider_img.src = product.img_1;
-                }
-            })
+  fetch(url + 'kit')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(product => {
+        if (product.id == id) {
+          slider_img.src = product.img_1;
+          page_detail.style.display = "flex";
+          document.querySelector("#thumb1").src = product.img_1;
+          document.querySelector("#thumb2").src = product.img_2;
+          document.querySelector("#thumb3").src = product.img_3;
+          slider_img.src = product.img_1;
         }
-        )
+      })
+    }
+    )
 }
 
 
@@ -173,12 +171,11 @@ function actualise(id) {
 //________________________________modale_________________________________________________________
 
 function openCartModal() {
-    document.getElementById('cart-modal').style.display = 'block';
-  }
-  
-  function closeCartModal() {
-    document.getElementById('cart-modal').style.display = 'none';
-  }
-  
-  document.querySelector('.close-modal').addEventListener('click', closeCartModal);
-  
+  document.getElementById('cart-modal').style.display = 'block';
+}
+
+function closeCartModal() {
+  document.getElementById('cart-modal').style.display = 'none';
+}
+
+document.querySelector('.close-modal').addEventListener('click', closeCartModal);
