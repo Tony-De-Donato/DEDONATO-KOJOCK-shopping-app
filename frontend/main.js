@@ -3,7 +3,7 @@ const articleCardsContainer = document.getElementById('article-cards');
 const marque = document.querySelector("#marque");
 const type = document.querySelector("#type");
 const btn = document.querySelector("#refresh_button");
-
+const page_detail = document.querySelector("#blur");
 let kits;
 
 
@@ -86,6 +86,7 @@ function display_kits(data) {
 
     // Ajout de la carte du produit au conteneur
     articleCardsContainer.appendChild(productCard);
+
   })
 }
 
@@ -96,7 +97,75 @@ function getKits() {
   fetch(url + 'kit')
     .then(response => response.json())
     .then(data => {
+
       display_kits(data);
+
+
+
+      // ______________________________  set actual select  _________________________________________
+
+      let actual = 1;
+      const sliders = document.querySelectorAll(".thumbnail");
+      const slider_img = document.querySelector("#image_carousel");
+      const detail_buttons = document.querySelectorAll('.product-details');
+      for (let i = 0; i < detail_buttons.length; i++) {
+        detail_buttons[i].addEventListener("click", function () {
+          actualise(detail_buttons[i].id);
+        });
+      }
+
+      console.log(document.querySelectorAll('.product-details'));
+
+
+      function actualise(id) {
+        fetch(url + 'kit')
+          .then(response => response.json())
+          .then(data => {
+            page_detail.style.display = "flex";
+            data.forEach(product => {
+              if (product.id == id) {
+                slider_img.src = product.img_1;
+                page_detail.style.display = "flex";
+                document.querySelector("#thumb1").src = product.img_1;
+                document.querySelector("#thumb2").src = product.img_2;
+                document.querySelector("#thumb3").src = product.img_3;
+                slider_img.src = product.img_1;
+              }
+            })
+            actual = id;
+            slider();
+
+          }
+          )
+      }
+
+
+
+      // ______________________________  slider  _________________________________________
+
+      function slider() {
+        console.log(sliders);
+        console.log(actual);
+
+        for (let i = 0; i < sliders.length; i++) {
+          sliders[i].addEventListener("click", function () {
+            changeslide(sliders[i].value);
+          });
+        }
+
+        function changeslide(val) {
+          if (val == 1) {
+            slider_img.src = "assets/kits/kit" + actual + "/img1.jpg";
+          }
+          if (val == 2) {
+            slider_img.src = "assets/kits/kit" + actual + "/img2.jpg";
+          }
+          if (val == 3) {
+            slider_img.src = "assets/kits/kit" + actual + "/img3.jpg";
+          }
+        }
+      }
+
     }
     )
     .catch(err => {
@@ -108,59 +177,6 @@ getKits();
 
 
 
-
-
-// ______________________________  slider  _________________________________________
-
-const sliders = document.querySelectorAll(".thumbnail");
-const slider_img = document.querySelector("#image_carousel");
-
-for (let i = 0; i < sliders.length; i++) {
-  sliders[i].addEventListener("click", function () {
-    changeslide(sliders[i].value);
-  });
-}
-
-function changeslide(val) {
-  if (val == 1) {
-    slider_img.src = "assets/kits/kit1/img1.jpg";
-  }
-  if (val == 2) {
-    slider_img.src = "assets/kits/kit1/img2.jpg";
-  }
-  if (val == 3) {
-    slider_img.src = "assets/kits/kit1/img3.jpg";
-  }
-}
-// ______________________________  set actual select  _________________________________________
-
-const page_detail = document.querySelector("#blur");
-const access_detail = document.querySelectorAll('.product-details');
-console.log(access_detail);
-
-for (var i = 0; i < access_detail.length; i++) {
-  access_detail[i].addEventListener("click", function () {
-    actualise(access_detail[i].id);
-  });
-}
-
-function actualise(id) {
-  fetch(url + 'kit')
-    .then(response => response.json())
-    .then(data => {
-      data.forEach(product => {
-        if (product.id == id) {
-          slider_img.src = product.img_1;
-          page_detail.style.display = "flex";
-          document.querySelector("#thumb1").src = product.img_1;
-          document.querySelector("#thumb2").src = product.img_2;
-          document.querySelector("#thumb3").src = product.img_3;
-          slider_img.src = product.img_1;
-        }
-      })
-    }
-    )
-}
 
 
 
