@@ -70,6 +70,7 @@ function display_kits(data) {
 
     const addToCartButton = document.createElement('button');
     addToCartButton.classList.add('add-to-cart');
+    addToCartButton.name = product.id;
     addToCartButton.innerText = 'Ajouter au panier';
 
 
@@ -106,7 +107,14 @@ function filtered_kits() {
     });
   }
 
-  console.log(document.querySelectorAll('.product-details'));
+  const just_add_kit = document.querySelectorAll(".add-to-cart");
+  for (let i = 0; i < just_add_kit.length; i++) {
+    just_add_kit[i].addEventListener("click", function () {
+      actual = just_add_kit[i].name;
+      SimplyAddToCart(actual);
+    });
+  }
+
 
 
   function actualise(id) {
@@ -126,6 +134,7 @@ function filtered_kits() {
             document.querySelector("#details_title").innerText = product.name;
 
             document.querySelector("#description").innerText = product.description;
+
             if (product.reduction != product.price) {
               document.querySelector("#reduction_barree").innerText = product.price;
               console.log(product.price);
@@ -157,8 +166,6 @@ function filtered_kits() {
                 document.querySelector("#selected_price").innerText = product.parts.elargisseurs_ailes;
               }
             });
-
-
           }
         });
         actual = id;
@@ -199,6 +206,8 @@ function filtered_kits() {
 }
 // ______________________________  recup tous les kits de l'api  _________________________________________
 
+
+
 function getKits() {
   fetch(url + 'kit')
     .then(response => response.json())
@@ -211,7 +220,7 @@ function getKits() {
       // ______________________________  set actual select  _________________________________________
 
       filtered_kits();
-      
+
     }
     )
     .catch(err => {
@@ -229,10 +238,38 @@ getKits();
 // ______________________________  ajout au panier  _________________________________________
 
 
-function addToCart() {
-  const prix_du_select = document.querySelector('#selected_price').innerText;
+function SimplyAddToCart(actual1) {
+
+  fetch(url + 'kit')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(product => {
+        if (product.id == actual1) {
+
+          if (localStorage.getItem(parseInt(product.id) + "-kit") == null) {
+            let copy = JSON.parse(localStorage.getItem(product.id + "-kit"));
+          }
+          const produit = {
+            id: parseInt(product.id) + "-kit",
+            name: product.name + "- Kit complet",
+            price: product.reduction,
+            img: product.img_1,
+            quantity: 1,
+
+          };
+          localStorage.setItem(produit.id, JSON.stringify(produit));
+        } else {
+          console.log("erreur, produit non trouvé");
+        }
+      });
+    })
+
 }
 
+function add_from_details() {
+  const prix_du_select = document.querySelector('#selected_price').innerText;
+  const prix_du_kit = document.querySelector('#selected_price').innerText;
+}
 
 //________________________________   modale   _________________________________________________________
 
