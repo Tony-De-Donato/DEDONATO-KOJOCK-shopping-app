@@ -131,32 +131,32 @@ function changeslide(val) {
 
 // ______________________________  set actual select  _________________________________________
 
-
-const actual = 1;
-const access_detail = document.querySelector(".product-details");
-access_detail.addEventListener("click", function(event) {
-
-    // Récupérer l'ID de l'élément qui a été cliqué
-    const idElementClique = event.target.id;
-  
-    // Utiliser l'ID de l'élément cliqué dans une fonction
-    actualise(idElementClique);
-  });
-  
-  
 const page_detail = document.querySelector("#blur");
+document.addEventListener("DOMContentLoaded", function() {
+    const access_detail = document.querySelectorAll(".product-details");
+    console.log(access_detail);
+  
+    for (var i = 0; i < access_detail.length; i++) {
+      access_detail[i].addEventListener("click", function() {
+        actualise(access_detail[i].id);
+      });
+    }
+  });
 
 function actualise(id) {
-    page_detail.style.display = "flex";
-    actual = id;
-    slider_img.src = product.img_1;
-    fetch(url + 'kits/' + id)
+    fetch(url + 'kit')
         .then(response => response.json())
         .then(data => {
-            document.querySelector("#thumb1").innerHTML = data.img_1;
-            document.querySelector("#thumb2").innerHTML = data.img_2;
-            document.querySelector("#thumb3").innerHTML = data.img_3;
-            slider_img.src = data.img_1;
+            data.forEach(product => {
+                if (product.id == id) {
+                    slider_img.src = product.img_1;
+                    page_detail.style.display = "flex";
+                    document.querySelector("#thumb1").src = product.img_1;
+                    document.querySelector("#thumb2").src = product.img_2;
+                    document.querySelector("#thumb3").src = product.img_3;
+                    slider_img.src = product.img_1;
+                }
+            })
         }
         )
 }
