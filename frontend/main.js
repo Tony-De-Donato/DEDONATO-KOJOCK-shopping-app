@@ -133,7 +133,37 @@ function filtered_kits() {
 
             document.querySelector("#details_title").innerText = product.name;
 
-            document.querySelector("#description").innerText = product.description;
+            //_____________________description________________________________________________________________________
+
+            let description = product.description;
+            let descriptionShort = product.description.slice(0, 150);
+
+
+            document.getElementById('more-text').innerText = 'Voir plus';
+            document.querySelector("#description").innerText = descriptionShort;
+
+            let isLess = true;
+
+            function changeTextMore() {
+              if (isLess) {
+                document.querySelector("#description").innerText = description;
+                document.getElementById('more-text').innerText = 'Voir moins';
+              } else {
+                document.querySelector("#description").innerText = descriptionShort;
+                document.getElementById('more-text').innerText = 'Voir plus';
+              }
+              isLess = !isLess;
+            }
+
+            document.getElementById('more-text').addEventListener('click', changeTextMore);
+
+
+
+
+
+
+
+            
 
             if (product.reduction != product.price) {
               document.querySelector("#reduction_barree").innerText = product.price;
