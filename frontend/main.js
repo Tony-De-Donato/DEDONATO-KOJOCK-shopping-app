@@ -202,3 +202,10 @@ function closeCartModal() {
 }
 
 document.querySelector('.close-modal').addEventListener('click', closeCartModal);
+
+
+function closeCard() {
+  document.getElementById('blur').style.display = 'none';
+}
+
+document.querySelector('leave_details').addEventListener('click', closeCard);
