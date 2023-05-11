@@ -115,6 +115,12 @@ function filtered_kits() {
     });
   }
 
+  const add_piece = document.querySelector("#ajouter_avec_choix");
+  add_piece.addEventListener("click", function () {
+    actual = add_piece.name;
+    addPieceToCart(actual);
+  });
+
 
 
   function actualise(id) {
@@ -132,6 +138,7 @@ function filtered_kits() {
             slider_img.src = product.img_1;
 
             document.querySelector("#details_title").innerText = product.name;
+            document.querySelector("#ajouter_avec_choix").name = product.id;
 
             //_____________________description________________________________________________________________________
 
@@ -163,7 +170,7 @@ function filtered_kits() {
 
 
 
-            
+
 
             if (product.reduction != product.price) {
               document.querySelector("#reduction_barree").innerText = product.price;
@@ -267,6 +274,30 @@ getKits();
 
 // ______________________________  ajout au panier  _________________________________________
 
+function addPieceToCart(actual1) {
+  fetch(url + 'kit')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(product => {
+        choix_a_afficher = choix.options[choix.selectedIndex].text;
+
+        if (product.id == actual1) {
+          const produit = {
+            id: product.id + "-" + choix_a_afficher,
+            name: product.name + "-" + choix_a_afficher,
+            price: document.querySelector("#selected_price").innerText,
+            img: product.img_1,
+            quantity: 1,
+
+          };
+          localStorage.setItem(produit.id, JSON.stringify(produit));
+
+        }
+      })
+
+    })
+
+}
 
 function SimplyAddToCart(actual1) {
 
@@ -275,29 +306,43 @@ function SimplyAddToCart(actual1) {
     .then(data => {
       data.forEach(product => {
         if (product.id == actual1) {
-          let theID = parseInt(product.id) + "-kit";
+          const produit = {
+            id: product.id+"-kit complet",
+            name: product.name + "- Kit complet",
+            price: product.reduction,
+            img: product.img_1,
+            quantity: 1,
 
-          if (localStorage.getItem(theID) != null) {
-            let copy = JSON.parse(localStorage.getItem(theID));
-            copy.quantity++;
-            localStorage.removeItem(theID);
-            localStorage.setItem(theID, JSON.stringify(copy));
-            console.log("produit ajouté");
-
-
-          } else {
-            const produit = {
-              id: theID,
-              name: product.name + "- Kit complet",
-              price: product.reduction,
-              img: product.img_1,
-              quantity: 1,
-
-            };
-            localStorage.setItem(produit.id, JSON.stringify(produit));
-          }
+          };
+          localStorage.setItem(produit.id, JSON.stringify(produit));
 
         }
+
+
+        //   if (product.id == actual1) {
+        //     let theID = parseInt(product.id) + "-kit";
+
+        //     if (localStorage.getItem(theID) != null) {
+        //       let copy = JSON.parse(localStorage.getItem(theID));
+        //       copy.quantity++;
+        //       localStorage.removeItem(theID);
+        //       localStorage.setItem(theID, JSON.stringify(copy));
+        //       console.log("produit ajouté");
+
+
+        //     } else {
+        //       const produit = {
+        //         id: theID,
+        //         name: product.name + "- Kit complet",
+        //         price: product.reduction,
+        //         img: product.img_1,
+        //         quantity: 1,
+
+        //       };
+        //       localStorage.setItem(produit.id, JSON.stringify(produit));
+        //     }
+
+        //  }
       });
     })
 
@@ -312,6 +357,8 @@ function add_from_details() {
 
 function openCartModal() {
   document.getElementById('cart-modal').style.display = 'block';
+
+  const panier_container = document.querySelector('#cart');
 }
 
 function closeCartModal() {
