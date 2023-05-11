@@ -17,7 +17,6 @@ exports.getKit = async (req, res) => {
         res.status(404).send({message : 'kit not found'});
     } else {
         res.status(200).json({
-            message : 'kit found succesfully',
             kit
         });
     }

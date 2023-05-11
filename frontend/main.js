@@ -15,7 +15,7 @@ function refresh() {
     fetch(url + 'kit')
         .then(response => response.json())
         .then(data => {
-            
+
             let brand = marque.options[marque.selectedIndex].text;
             let genre = type.options[type.selectedIndex].text;
 
@@ -41,7 +41,7 @@ function display_kits(data) {
         // Création des éléments HTML pour chaque carte d'article
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
-        productCard.id = product.id;
+
 
         const productImage = document.createElement('img');
         productImage.classList.add('product-image');
@@ -71,9 +71,10 @@ function display_kits(data) {
         addToCartButton.classList.add('add-to-cart');
         addToCartButton.innerText = 'Ajouter au panier';
 
-        
+
         const productDetailsButton = document.createElement('div');
         productDetailsButton.classList.add('product-details');
+        productDetailsButton.id = product.id;
         productDetailsButton.innerText = 'Voir la fiche produit';
 
         // Ajout des éléments HTML à la carte du produit
@@ -102,17 +103,17 @@ function getKits() {
             console.log(err);
         });
 }
+getKits();
 
 
 
-// ______________________________  set actual select  _________________________________________
 
 
 
 // ______________________________  slider  _________________________________________
 
 const sliders = document.querySelector(".thumbnail");
-sliders.addEventListener("click", changeslide(sliders.value) )
+sliders.addEventListener("click", changeslide(sliders.value))
 
 slider_img = document.querySelector("#image_carousel");
 
@@ -128,5 +129,43 @@ function changeslide(val) {
     }
 }
 
+// ______________________________  set actual select  _________________________________________
 
-getKits();
+
+const actual = 1;
+const access_detail = document.querySelector(".product-details");
+access_detail.addEventListener("click", function(event) {
+
+    // Récupérer l'ID de l'élément qui a été cliqué
+    const idElementClique = event.target.id;
+  
+    // Utiliser l'ID de l'élément cliqué dans une fonction
+    actualise(idElementClique);
+  });
+  
+  
+const page_detail = document.querySelector("#blur");
+
+function actualise(id) {
+    page_detail.style.display = "flex";
+    actual = id;
+    slider_img.src = product.img_1;
+    fetch(url + 'kits/' + id)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector("#thumb1").innerHTML = data.img_1;
+            document.querySelector("#thumb2").innerHTML = data.img_2;
+            document.querySelector("#thumb3").innerHTML = data.img_3;
+            slider_img.src = data.img_1;
+        }
+        )
+}
+
+
+
+// ______________________________  detail / pas detail  _________________________________________
+
+
+
+
+
