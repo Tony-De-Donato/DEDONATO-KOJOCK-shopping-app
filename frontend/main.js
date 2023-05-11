@@ -37,7 +37,7 @@ function display_kits(data) {
   if (data.length == 0) {
     articleCardsContainer.innerHTML = "<h1>Aucun résultat ne correspond aux filtres que vous venez d'appliquer.</h1>";
   }
-  
+
   data.forEach(product => {
     // Création des éléments HTML pour chaque carte d'article
     const productCard = document.createElement('div');
@@ -136,8 +136,8 @@ function filtered_kits() {
                 if (product.reduction != product.price) {
                   const cutPrice = document.createElement('span');
                   cutPrice.classList.add('original-price');
-                  cutPrice.innerText = `${product.price}€`;
-                  document.querySelector("#selected_price").innerHTML = `${cutPrice.outerHTML} ${product.reduction}€`;
+                  document.querySelector("#reduction_barree").innerHTML = `${product.price}€`;
+                  document.querySelector("#selected_price").innerHTML = `${product.reduction}`;
                 } else {
                   document.querySelector("#selected_price").innerText = product.reduction;
                 }
@@ -156,6 +156,34 @@ function filtered_kits() {
         });
         actual = id;
         console.log(actual);
+
+        // ______________________________  slider  _________________________________________
+
+        function slider() {
+
+          for (let i = 0; i < sliders.length; i++) {
+            sliders[i].addEventListener("click", function () {
+              sliders.forEach(slider => {
+                slider.classList.remove("the_thumb");
+              }
+              );
+              sliders[i].classList.add("the_thumb");
+              changeslide(sliders[i].name);
+            });
+          }
+
+          function changeslide(val) {
+            if (val == 1) {
+              slider_img.src = "assets/kits/kit" + actual + "/img1.jpg";
+            }
+            if (val == 2) {
+              slider_img.src = "assets/kits/kit" + actual + "/img2.jpg";
+            }
+            if (val == 3) {
+              slider_img.src = "assets/kits/kit" + actual + "/img3.jpg";
+            }
+          }
+        }
         slider();
 
       }
@@ -176,37 +204,7 @@ function getKits() {
       // ______________________________  set actual select  _________________________________________
 
       filtered_kits();
-
-
-
-      // ______________________________  slider  _________________________________________
-
-      function slider() {
-
-        for (let i = 0; i < sliders.length; i++) {
-          sliders[i].addEventListener("click", function () {
-            sliders.forEach(slider => {
-              slider.classList.remove("the_thumb");
-            }
-            );
-            sliders[i].classList.add("the_thumb");
-            changeslide(sliders[i].name);
-          });
-        }
-
-        function changeslide(val) {
-          if (val == 1) {
-            slider_img.src = "assets/kits/kit" + actual + "/img1.jpg";
-          }
-          if (val == 2) {
-            slider_img.src = "assets/kits/kit" + actual + "/img2.jpg";
-          }
-          if (val == 3) {
-            slider_img.src = "assets/kits/kit" + actual + "/img3.jpg";
-          }
-        }
-      }
-
+      
     }
     )
     .catch(err => {
@@ -221,11 +219,15 @@ getKits();
 
 
 
-// ______________________________  detail / pas detail  _________________________________________
+// ______________________________  ajout au panier  _________________________________________
 
 
+function addToCart() {
+  const prix_du_select = document.querySelector('#selected_price').innerText;
+}
 
-//________________________________modale_________________________________________________________
+
+//________________________________   modale   _________________________________________________________
 
 function openCartModal() {
   document.getElementById('cart-modal').style.display = 'block';
