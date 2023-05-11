@@ -1,0 +1,17 @@
+Malcolm : 
+    >remplir le data2.json
+    >front du panier
+    >text de description adaptatif
+    >affichage du modale panier
+
+Tony :
+    >refaire et adapter le cours API rest / express
+    >modifier les nomenclatures des fichiers et variables
+    >refaire le readme
+    >creation du json
+    >page des produits
+    >modale détail produit
+    >ajout au panier
+    >récupération des données par l'api
+    >maj de la page suivant les données de l'api
+    >tout le reste
