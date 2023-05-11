@@ -149,7 +149,12 @@ function getKits() {
 
         for (let i = 0; i < sliders.length; i++) {
           sliders[i].addEventListener("click", function () {
-            changeslide(sliders[i].value);
+            sliders.forEach(slider => {
+              slider.classList.remove("the_thumb");
+            }
+            );
+            sliders[i].classList.add("the_thumb");
+            changeslide(sliders[i].name);
           });
         }
 
