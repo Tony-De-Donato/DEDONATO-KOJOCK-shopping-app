@@ -338,8 +338,7 @@ select:hover {
     background-color: #fff;
     margin: 15% auto;
     padding: 20px;
-    width: 80%;
-    max-width: 600px;
+    width: 70%;
     position: relative;
 }
 
@@ -437,6 +436,7 @@ select:hover {
 
 #cart-items {
     display: flex;
+    flex-direction: column;
     justify-content: start;
     align-items: start;
     width: 100%;
@@ -454,5 +454,21 @@ select:hover {
 }
 
 .items_img{
-    width: 10%;
+    width: 8%;
+}
+
+.delete:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 1s;
+}
+
+.delete:not(:hover) {
+    transition: 1s;
+}
+
+
+.cart-total {
+    border-top: 2px solid black;
+    padding-top: 2vh;
 }

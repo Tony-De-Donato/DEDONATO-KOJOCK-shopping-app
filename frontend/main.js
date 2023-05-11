@@ -307,7 +307,7 @@ function SimplyAddToCart(actual1) {
       data.forEach(product => {
         if (product.id == actual1) {
           const produit = {
-            id: product.id+"-kit complet",
+            id: product.id + "-kit complet",
             name: product.name + "- Kit complet",
             price: product.reduction,
             img: product.img_1,
@@ -357,8 +357,69 @@ function add_from_details() {
 
 function openCartModal() {
   document.getElementById('cart-modal').style.display = 'block';
+  const existingElement = document.querySelector("#cart-items");
+  existingElement.innerHTML = "";
+  let total = 0;
+  let localStorageArray = [];
 
-  const panier_container = document.querySelector('#cart');
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = JSON.parse(localStorage.getItem(key));
+    localStorageArray.push({ key, value });
+  }
+  for (let element of localStorageArray) {
+    total += element.value.price * element.value.quantity;
+    // Créer un élément div avec la classe "items"
+    const itemsDiv = document.createElement("div");
+    itemsDiv.className = "items";
+
+    // Créer un élément img avec la classe "items_img" et l'attribut src défini sur "assets/kits/kit1/img1.jpg"
+    const imgElem = document.createElement("img");
+    imgElem.className = "items_img";
+    imgElem.src = element.value.img;
+
+    // Créer des éléments p pour le nom du produit, le prix et "SUPPRIMER"
+    const productNameElem = document.createElement("p");
+    productNameElem.textContent = element.value.name;
+    const separator1 = document.createElement("p");
+    separator1.textContent = "|";
+    const priceElem = document.createElement("p");
+    priceElem.textContent = element.value.price*element.value.quantity;
+    const euroSignElem = document.createElement("p");
+    euroSignElem.textContent = "€";
+    const separator2 = document.createElement("p");
+    separator2.textContent = "|";
+    const deleteElem = document.createElement("p");
+    deleteElem.name = element.value.id;
+    deleteElem.className = "delete";
+    deleteElem.textContent = "SUPPRIMER";
+
+    // Ajouter tous les éléments créés au div parent "items"
+    itemsDiv.appendChild(imgElem);
+    itemsDiv.appendChild(productNameElem);
+    itemsDiv.appendChild(separator1);
+    itemsDiv.appendChild(priceElem);
+    itemsDiv.appendChild(euroSignElem);
+    itemsDiv.appendChild(separator2);
+    itemsDiv.appendChild(deleteElem);
+
+    // Ajouter le div "items" à un élément existant dans votre document HTML
+
+    existingElement.appendChild(itemsDiv);
+
+  }
+
+  document.querySelector("#total-price").innerText = total + " €";
+
+  const deleteButtons = document.querySelectorAll(".delete");
+  for (let deleteButton of deleteButtons) {
+    deleteButton.addEventListener("click", function () {
+      localStorage.removeItem(deleteButton.name);
+      openCartModal();
+    });
+  }
+
+
 }
 
 function closeCartModal() {
