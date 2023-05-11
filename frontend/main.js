@@ -134,7 +134,7 @@ function getKits() {
 
                 document.querySelector("#details_title").innerText = product.name;
 
-                document.querySelector("#description").innerText = product.price;
+                document.querySelector("#description").innerText = product.description;
 
                 let choix_a_afficher = choix.options[choix.selectedIndex].text;
                 choix_a_afficher.addEventListener("change", function () {

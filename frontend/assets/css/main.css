@@ -339,3 +339,16 @@
         top: 10px;
         right: 15px;
     }
+
+    .close_button{
+        border: none;
+        background-color: #fff;
+    }
+    .close_button:hover{
+        cursor: pointer;
+        scale: 1.1;
+        transition: 1s;
+    }
+    .close_button:not(:hover){
+        transition: 1s;
+    }
