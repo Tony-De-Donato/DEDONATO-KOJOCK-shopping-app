@@ -170,5 +170,15 @@ function actualise(id) {
 
 
 
+//________________________________modale_________________________________________________________
 
-
+function openCartModal() {
+    document.getElementById('cart-modal').style.display = 'block';
+  }
+  
+  function closeCartModal() {
+    document.getElementById('cart-modal').style.display = 'none';
+  }
+  
+  document.querySelector('.close-modal').addEventListener('click', closeCartModal);
+  
